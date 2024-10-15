@@ -1,11 +1,15 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'M2_HOME'
+    }
     stages {
-        stage('Hello') {
+        stage('GIT'){
             steps {
-                echo 'Hello World'
+                git branch: 'master',
+                url: 'https://github.com/boujelbenezaineb/time-sheet/tree/master'
             }
         }
     }
 }
+
