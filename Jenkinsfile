@@ -11,21 +11,20 @@ pipeline {
             }
         }
 
-        stage ('MVN CLEAN') {
+        stage('MVN CLEAN') {
             steps {
-                sh '.............'
+                sh 'mvn clean'
             }
         }
-
-        stage ('MVN COMPILE') {
+        stage('MVN COMPILE') {
             steps {
-                sh '...............'
-                    }
+                sh 'mvn compile'
+            }
         }
 
         stage ('MVN SONARQUBE') {
             steps {
-                sh '.........'
+                sh 'MVN SONARQUBE'
             }
         }
             
