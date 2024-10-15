@@ -22,9 +22,11 @@ pipeline {
             }
         }
 
-        stage ('MVN SONARQUBE') {
+        stage('MVN SONARQUBE') {
             steps {
-                sh 'mvn sonar:sonar'
+                withCredentials([string(credentialsId: 'sonarqube-token', variable: 'squ_c49071ad9909af7006732bc4227d59c72bb3918d')]) {
+                    sh 'mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN'
+                }
             }
         }
             
