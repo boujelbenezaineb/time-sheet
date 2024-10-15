@@ -24,7 +24,7 @@ pipeline {
 
         stage ('MVN SONARQUBE') {
             steps {
-                sh 'MVN SONARQUBE'
+                sh 'mvn sonar:sonar'
             }
         }
             
