@@ -100,11 +100,13 @@
 	            <artifactId>maven-compiler-plugin</artifactId>
 	            <version>3.8.1</version>
 	            <configuration>
-	                <source>17</source> <!-- Set to Java 17 -->
-	                <target>17</target> <!-- Set to Java 17 -->
+	                <source>17</source> <!-- Use your current Java version -->
+	                <target>17</target> <!-- Use your current Java version -->
 	                <compilerArgs>
 	                    <arg>--add-opens</arg>
 	                    <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+	                    <arg>--add-opens</arg>
+	                    <arg>java.base/java.lang=ALL-UNNAMED</arg>
 	                </compilerArgs>
 	            </configuration>
 	        </plugin>
@@ -114,6 +116,7 @@
 	        </plugin>
 	    </plugins>
 	</build>
+
 
 
 
