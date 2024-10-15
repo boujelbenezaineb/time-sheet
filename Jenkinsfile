@@ -7,7 +7,7 @@ pipeline {
         stage('GIT'){
             steps {
                 git branch: 'master',
-                url: 'https://github.com/boujelbenezaineb/time-sheet/tree/master'
+                url: 'https://github.com/boujelbenezaineb/time-sheet'
             }
         }
     }
