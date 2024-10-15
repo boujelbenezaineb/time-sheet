@@ -10,6 +10,25 @@ pipeline {
                 url: 'https://github.com/boujelbenezaineb/time-sheet'
             }
         }
+
+        stage ('MVN CLEAN') {
+            steps {
+                sh '.............'
+            }
+        }
+
+        stage ('MVN COMPILE') {
+            steps {
+                sh '...............'
+                    }
+        }
+
+        stage ('MVN SONARQUBE') {
+            steps {
+                sh '.........'
+            }
+        }
+            
     }
 }
 
